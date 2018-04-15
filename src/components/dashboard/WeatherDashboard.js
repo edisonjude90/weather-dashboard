@@ -12,6 +12,7 @@ import {
 import wData from '../../data/data';
 import constantVal from '../../constants/constants';
 import WeatherCards from './WeatherCards';
+//import CityMoreInfo from './CityMoreInfo';
 
 function handleWeatherApiRequest(cityName){
 
@@ -97,8 +98,8 @@ class WeatherDashboard extends Component {
             pinnedCity:pinnedCity,
             WeatherInfo:weatherInfo
         },()=>( window.localStorage.setItem("weatherPinnedCity",JSON.stringify(this.state.pinnedCity)) ));
-        
-    }
+     
+     }
 
     render(){
 
@@ -117,7 +118,7 @@ class WeatherDashboard extends Component {
                         <Col>
                             {(this.state.pinnedCity.length < 5) && 
                                 <InputGroup>
-                                    <Input placeholder = "Search and Pin" value = { this.state.searchTxtVal } onChange = { this.HandleOnChange } />
+                                    <Input autoFocus placeholder = "Search and Pin" value = { this.state.searchTxtVal } onChange = { this.HandleOnChange } />
                                     <InputGroupAddon addonType = "append">
                                         <Button onClick = { this.HandleOnPinnedCity } > Pin </Button>
                                     </InputGroupAddon>  
@@ -150,7 +151,11 @@ class WeatherDashboard extends Component {
                 WeatherInfo:res
             })
         ));
+    
+
+
     }
+
 
 }
 

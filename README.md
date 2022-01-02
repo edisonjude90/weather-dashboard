@@ -5,5 +5,5 @@ API used http://api.openweathermap.org to get live weather updates
 
 ![Alt text](info/weather-dashboard.png?raw=true "Screen 1")
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project is bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
